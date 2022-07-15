@@ -1,0 +1,28 @@
+﻿@model List<EmployeeViewModel>
+<h1>Employee Details</h1>
+
+<div class="center">
+    <table border="1" width="500px" style="background-color:chocolate">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Created Date</th>
+                <th>Experience in years</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="background-color:@item.RowCssColor">
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.City</td>
+                    <td>@item.CreatedDate</td>
+                    <td>@item.YearsOfExperience</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
