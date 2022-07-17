@@ -1,0 +1,16 @@
+﻿<h1>Products Controller - Index View</h1>
+
+<p>@ViewData["Country"]</p>
+<p>@ViewData["PrimeNumber"]</p>
+<p>@ViewData["EmpModel"]</p>
+
+
+<h1>ViewBag Examples</h1>
+@{
+    var fullName = $"{@ViewBag.FirstName} {@ViewBag.LastName}";
+    var employeeStatus = @ViewBag.IsAContractualEmployee == true ? "contractual employee" : "permanent employee";
+}
+
+<h3>@fullName has been an employee since @ViewBag.CreatedDate</h3>
+<h4>He is a @employeeStatus</h4>
+

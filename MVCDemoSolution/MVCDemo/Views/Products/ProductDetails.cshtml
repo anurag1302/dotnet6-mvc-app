@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProductDetailsViewModel>
+
+<div class="center">
+    <table border="1" width="500px" style="background-color:chocolate">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Product Category</th>
+                <th>Order Status</th>
+                <th>Ordered Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.ProductCategory</td>
+                    <td>@item.Status</td>
+                    <td>@item.OrderedDate.Value.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

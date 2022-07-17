@@ -1,0 +1,33 @@
+﻿@model BaseProductViewModel
+
+<h2>Product Report</h2>
+<p>Count - @Model.Count</p>
+<p>Latest Order Date - @Model.LatestOrderDate.ToLongDateString()</p>
+
+<h2>Products Info</h2>
+
+<div class="center">
+    <table border="1" width="100%" style="background-color:chocolate">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Product Category</th>
+                <th>Order Status</th>
+                <th>Ordered Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.ProductCategory</td>
+                    <td>@item.Status</td>
+                    <td>@item.OrderedDate.Value.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
